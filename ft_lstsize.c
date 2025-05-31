@@ -6,7 +6,7 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:53:39 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 16:54:41 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/05/31 22:54:12 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -19,9 +19,11 @@ typedef struct s_list
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *node = malloc(sizeof(t_list));
+	t_list	*node;
+
+	node = malloc(sizeof(t_list));
 	if (!node)
-		return 0;
+		return (0);
 	node->content = content;
 	node->next = 0;
 	return (node);
@@ -29,7 +31,9 @@ t_list	*ft_lstnew(void *content)
 
 int	ft_lstsize(t_list *lst)
 {
-	int	count = 0;
+	int	count;
+
+	count = 0;
 	while (lst)
 	{
 		count++;
