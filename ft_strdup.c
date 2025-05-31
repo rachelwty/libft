@@ -34,7 +34,7 @@ char	*ft_strdup(const char *s1)
 }
 /*
 #include <stdio.h>
-#i changed stuff
+
 char	*ft_strdup(const char *s1);
 
 int	main(void)
