@@ -6,7 +6,7 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 20:55:54 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 20:56:20 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/05/31 23:17:53 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -60,4 +60,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
-

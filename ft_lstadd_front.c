@@ -6,24 +6,27 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 15:42:36 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 15:43:36 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/05/31 23:05:29 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *node = malloc(sizeof(t_list));
+	t_list	*node;
+
+	node = malloc(sizeof(t_list));
 	if (!node)
 		return (0);
 	node->content = content;
 	node->next = 0;
 	return (node);
 }
+
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!new)
-		return;
+		return ;
 	new->next = *lst;
 	*lst = new;
 }

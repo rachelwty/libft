@@ -6,14 +6,14 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:55:54 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 16:56:07 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/05/31 23:07:06 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			i;
+	size_t				i;
 	const unsigned char	*ptr;
 
 	ptr = (const unsigned char *)s;

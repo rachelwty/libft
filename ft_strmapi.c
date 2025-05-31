@@ -6,7 +6,7 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:42:30 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 17:43:58 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/05/31 23:13:18 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -20,9 +20,10 @@ int	ft_strlen(char const *s)
 		len++;
 	return (len);
 }
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*new_str;
+	char			*new_str;
 	unsigned int	i;
 
 	if (!s || !f)

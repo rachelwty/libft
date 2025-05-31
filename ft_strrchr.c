@@ -6,12 +6,12 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:45:50 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 17:46:25 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/05/31 23:14:08 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char *ft_strrchr (const char *s, int c)
 {
 	const char	*last = NULL;
 
