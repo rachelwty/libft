@@ -1,32 +1,45 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/31 15:39:19 by wtze-yan          #+#    #+#             */
+/*   Updated: 2025/05/31 21:05:25 by wtze-yan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    t_list *last;
+	t_list	*last;
 
-    if (!lst || !new)
-        return;
-    if (*lst == 0)
-    {
-        *lst = new;
-        return;
-    }
-    last = *lst;
-    while (last->next != 0)
-        last = last->next;
-    last->next = new;
+	if (!lst || !new)
+		return ;
+	if (*lst == 0)
+	{
+		*lst = new;
+		return ;
+	}
+	last = *lst;
+	while (last->next != 0)
+		last = last->next;
+	last->next = new;
 }
-t_list  *ft_lstnew(void *content)
+
+t_list	*ft_lstnew(void *content)
 {
-    t_list *node = (t_list *)malloc(sizeof(t_list));
-    if (!node)
-        return (0);
-    node->content = content;
-    node->next = 0;
-    return (node);
+	t_list	*node;
+
+	node = (t_list *)malloc(sizeof(t_list));
+	if (!node)
+		return (0);
+	node->content = content;
+	node->next = 0;
+	return (node);
 }
+/*
 int main(void)
 {
     t_list *head = 0;
@@ -42,4 +55,4 @@ int main(void)
         tmp = tmp->next;
     }
     return 0;
-}
+}*/

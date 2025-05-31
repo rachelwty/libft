@@ -1,21 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/31 15:47:43 by wtze-yan          #+#    #+#             */
+/*   Updated: 2025/05/31 21:07:52 by wtze-yan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    while (lst)
-    {
-        f(lst->content);
-        lst = lst->next;
-    }
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }
 
-void print_content(void *content)
+void	print_content(void *content)
 {
-    printf("%s\n", (char *)content);
+	printf("%s\n", (char *)content);
 }
-
+/*
 int main(void)
 {
     t_list *head = malloc(sizeof(t_list));
@@ -32,4 +41,4 @@ int main(void)
     free(node2);
     free(head);
     return 0;
-}
+}*/

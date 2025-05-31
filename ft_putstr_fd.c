@@ -1,41 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/31 15:42:36 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 15:43:36 by wtze-yan         ###   ########.fr       */
+/*   Created: 2025/05/31 17:10:16 by wtze-yan          #+#    #+#             */
+/*   Updated: 2025/05/31 17:12:50 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_putstr_fd(char *s, int fd)
 {
-	t_list *node = malloc(sizeof(t_list));
-	if (!node)
-		return (0);
-	node->content = content;
-	node->next = 0;
-	return (node);
-}
-void	ft_lstadd_front(t_list **lst, t_list *new)
-{
-	if (!new)
-		return;
-	new->next = *lst;
-	*lst = new;
+	int	i;
+
+	if (!s)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }
 /*
 int	main(void)
 {
-	t_list *head = 0;
-
-	ft_lstadd_front(&head, ft_lstnew("one"));
-	ft_lstadd_front(&head, ft_lstnew("two"));
-
-	printf("%s\n", (char *)head->content);
-	printf("%s\n", (char *)head->next->content);
+	ft_putstr_fd("delulu\n", 1);
 	return (0);
 }*/

@@ -1,5 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/31 16:53:39 by wtze-yan          #+#    #+#             */
+/*   Updated: 2025/05/31 16:54:41 by wtze-yan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "libft.h"
 
 typedef struct s_list
 {
@@ -14,7 +24,7 @@ t_list	*ft_lstnew(void *content)
 		return 0;
 	node->content = content;
 	node->next = 0;
-	return node;
+	return (node);
 }
 
 int	ft_lstsize(t_list *lst)
@@ -25,7 +35,7 @@ int	ft_lstsize(t_list *lst)
 		count++;
 		lst = lst->next;
 	}
-	return count;
+	return (count);
 }
 /*
 int	main(void)

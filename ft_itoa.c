@@ -1,4 +1,15 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/31 15:37:16 by wtze-yan          #+#    #+#             */
+/*   Updated: 2025/05/31 15:38:14 by wtze-yan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "libft.h"
 
 static int	ft_numlen(int n)
 {
@@ -42,9 +53,6 @@ char	*ft_itoa(int n)
 	return (str);
 }
 /*
-#include <stdio.h>
-#include <stdlib.h>
-
 int main(void)
 {
     char *str;

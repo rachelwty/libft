@@ -1,32 +1,36 @@
-#include <stdlib.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/31 15:44:27 by wtze-yan          #+#    #+#             */
+/*   Updated: 2025/05/31 21:12:08 by wtze-yan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "libft.h"
 
-typedef struct s_list
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-    void            *content;
-    struct s_list   *next;
-}   t_list;
+	t_list	*temp;
 
-void ft_lstclear(t_list **lst, void (*del)(void *))
-{
-    t_list *temp;
-
-    if (!lst || !del)
-        return;
-    while (*lst)
-    {
-        temp = (*lst)->next;
-        del((*lst)->content);
-        free(*lst);
-        *lst = temp;
-    }
+	if (!lst || !del)
+		return ;
+	while (*lst)
+	{
+		temp = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		*lst = temp;
+	}
 }
 
-void del(void *content)
+void	del(void *content)
 {
-    free(content);
+	free(content);
 }
-
+/*
 int main(void)
 {
     t_list *head = 0;
@@ -43,4 +47,4 @@ int main(void)
         printf("List cleared\n");
 
     return 0;
-}
+}*/

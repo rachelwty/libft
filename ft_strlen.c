@@ -1,48 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/31 15:26:49 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 15:32:05 by wtze-yan         ###   ########.fr       */
+/*   Created: 2025/05/19 20:19:09 by wtze-yan          #+#    #+#             */
+/*   Updated: 2025/05/31 17:41:12 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+size_t	ft_strlen(const char *s)
 {
-	size_t			i;
-	unsigned char	*ptr;
+	size_t	i;
 
-	ptr = (unsigned char *)s;
 	i = 0;
-	while (i < n)
-	{
-		ptr[i] = 0;
+	while (s[i])
 		i++;
-	}
+	return (i);
 }
-/*
-void	ft_bzero(void *s, size_t n);
-
-int	main(void)
-{
-	char    str[] = "hello";
-    int     i;
-
-    ft_bzero(str + 2, 3);
-
-    i = 0;
-    while (i < 5)
-    {
-        if (str[i] != 0)
-            printf("%c", str[i]);
-        else
-            printf(".");
-        i++;
-    }
-    printf("\n");
-    return(0);
-}*/
