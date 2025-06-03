@@ -6,10 +6,21 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:48:30 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 23:19:35 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 16:30:39 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
+char	*empty_substr(void)
+{
+	char	*substr;
+
+	substr = (char *)malloc(1);
+	if (!substr)
+		return (NULL);
+	substr[0] = '\0';
+	return (substr);
+}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -23,13 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	while (s[s_len])
 		s_len++;
 	if (start >= s_len)
-	{
-		substr = (char *)malloc(1);
-		if (!substr)
-			return (NULL);
-		substr[0] = '\0';
-		return (substr);
-	}
+		return (empty_substr());
 	if (len > s_len - start)
 		len = s_len - start;
 	substr = (char *)malloc((len + 1) * sizeof(char));

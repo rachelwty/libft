@@ -6,16 +6,10 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:53:39 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 22:54:12 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 16:17:04 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
 
 t_list	*ft_lstnew(void *content)
 {

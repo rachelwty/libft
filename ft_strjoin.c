@@ -6,59 +6,43 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:38:09 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 23:11:00 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 16:47:49 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	len1;
-	size_t	len2;
-	size_t	i;
-	char	*joined;
+	size_t	s1_len;
+	size_t	s2_len;
+	char	*dest;
 
 	if (!s1 || !s2)
 		return (NULL);
-	len1 = 0;
-	while (s1[len1])
-		len1++;
-	len2 = 0;
-	while (s2[len2])
-		len2++;
-	joined = (char *)malloc(len1 + len2 + 1);
-	if (!joined)
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	dest = ft_calloc((s1_len + s2_len + 1), sizeof(char));
+	if (dest == NULL)
 		return (NULL);
-	i = 0;
-	while (i < len1)
-	{
-		joined[i] = s1[i];
-		i++;
-	}
-	len2 = 0;
-	while (s2[len2])
-	{
-		joined[i] = s2[len2];
-		i++;
-		len2++;
-	}
-	joined[i] = '\0';
-	return (joined);
+	ft_memmove(dest, s1, s1_len);
+	ft_memmove(dest + s1_len, s2, s2_len);
+	return (dest);
 }
 /*
-#include <stdio.h>
-
-char	*ft_strjoin(char const *s1, char const *s2);
-
-int	main(void)
+int main(void)
 {
-	char *result;
+	char *s1 = "super";
+	char *s2 = "saiyan";
+	char *result = ft_strjoin(s1, s2);
 
-	result = ft_strjoin("super", "saiyan");
 	if (result)
 	{
-		printf("%s\n", result);
+		printf("Result: %s\n", result);
 		free(result);
 	}
+	else
+		printf("Error: NULL\n");
 	return (0);
-}*/
+}
+*/

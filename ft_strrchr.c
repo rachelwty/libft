@@ -6,16 +6,16 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:45:50 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/06/03 16:00:14 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 16:21:50 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strrchr (const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	const char	*last;	
-	*last = NULL;
+	const char	*last;
 
+	*last = NULL;
 	while (*s)
 	{
 		if (*s == (char)c)

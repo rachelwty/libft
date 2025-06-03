@@ -6,7 +6,7 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:20:41 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 17:33:14 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 16:20:02 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -124,4 +124,4 @@ int	main(void)
 	free(split);
 
 	return (0);
-}
+}*/
