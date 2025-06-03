@@ -32,6 +32,8 @@ void	to_upper(unsigned int i, char *c)
 		*c = *c - 32;
 }
 /*
+#include <stdio.h>
+
 int	main(void)
 {
 	char str[] = "hello";

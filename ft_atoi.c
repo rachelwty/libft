@@ -36,6 +36,8 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 /*
+#include <stdio.h>
+
 int main(void)
 {
     printf("ft_atoi(\"-2147483648\") = %d\n", ft_atoi("-2147483648"));

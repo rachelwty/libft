@@ -82,6 +82,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	return (dest);
 }
 /*
+#include <stdio.h>
+
 int	main(void)
 {
 	char	*trimmed;

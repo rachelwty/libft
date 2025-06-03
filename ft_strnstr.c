@@ -32,7 +32,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 }
 /*
 #include <stdio.h>
-#include <stddef.h>
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 

@@ -25,6 +25,8 @@ void	print_content(void *content)
 	printf("%s\n", (char *)content);
 }
 /*
+#include <stdio.h>
+
 int main(void)
 {
     t_list *head = malloc(sizeof(t_list));

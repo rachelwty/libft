@@ -31,6 +31,8 @@ void	del(void *content)
 	free(content);
 }
 /*
+#include <stdio.h>
+
 int main(void)
 {
     t_list *head = 0;

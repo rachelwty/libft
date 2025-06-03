@@ -40,6 +40,8 @@ t_list	*ft_lstnew(void *content)
 	return (node);
 }
 /*
+#include <stdio.h>
+
 int main(void)
 {
     t_list *head = 0;

@@ -42,6 +42,8 @@ int	ft_lstsize(t_list *lst)
 	return (count);
 }
 /*
+#include <stdio.h>
+
 int	main(void)
 {
 	t_list *head = 0;
