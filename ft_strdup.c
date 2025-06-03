@@ -6,10 +6,11 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:34:54 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 20:49:56 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 16:53:26 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <stdio.h>
 
 char	*ft_strdup(const char *s1)
 {
@@ -33,8 +34,6 @@ char	*ft_strdup(const char *s1)
 	return (copy);
 }
 /*
-#include <stdio.h>
-
 char	*ft_strdup(const char *s1);
 
 int	main(void)

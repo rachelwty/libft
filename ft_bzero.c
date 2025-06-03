@@ -6,10 +6,11 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 15:26:49 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 15:32:05 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:20:26 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -25,8 +26,6 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 /*
-#include <stdio.h>
-
 void	ft_bzero(void *s, size_t n);
 
 int	main(void)

@@ -6,29 +6,45 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:06:47 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/06/03 16:15:18 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:05:37 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <stdio.h>
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	t_list	*result;
-	t_list	*new;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	if (!lst || !f || !del)
-		return (NULL);
-	result = NULL;
-	while (lst)
+	if (dst == 0 && src == 0)
+		return (dst);
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
+	if (dst < src)
 	{
-		new = ft_lstnew(f(lst->content));
-		if (!new)
+		while (n > 0)
 		{
-			ft_lstclear(&result, del);
-			return (NULL);
+			*d++ = *s++;
+			n--;
 		}
-		ft_lstadd_back(&result, new);
-		lst = lst->next;
 	}
-	return (result);
+	else
+	{
+		while (n--)
+			*(d + n) = *(s + n);
+	}
+	return (dst);
 }
+/*
+void *ft_memmove(void *dst, const void *src, size_t n);
+
+int main(void)
+{
+	char src[] = "abcdef";
+	char dst[10];
+
+	ft_memmove(dst, src, 6)
+	printf("Result: %s\n", dst);
+	return (0);
+}*/

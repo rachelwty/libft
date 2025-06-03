@@ -6,10 +6,11 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:33:45 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 17:34:29 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 16:52:52 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <stdio.h>
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -24,8 +25,6 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 /*
-#include <stdio.h>
-
 char	*ft_strchr(const char *s, int c);
 
 int	main(void)

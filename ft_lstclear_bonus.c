@@ -6,10 +6,11 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 15:44:27 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 21:12:08 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:14:26 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <stdio.h>
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
@@ -31,8 +32,6 @@ void	del(void *content)
 	free(content);
 }
 /*
-#include <stdio.h>
-
 int main(void)
 {
     t_list *head = 0;

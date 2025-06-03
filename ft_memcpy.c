@@ -6,10 +6,11 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:05:20 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 20:43:23 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:11:55 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <stdio.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -28,8 +29,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 /*
-#include <stdio.h>
-
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 int	main(void)

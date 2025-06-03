@@ -6,10 +6,11 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:20:41 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/06/03 16:20:02 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:07:02 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <stdio.h>
 
 static int	word_count(char const *s, char c)
 {
@@ -107,8 +108,6 @@ char	**ft_split(char const *s, char c)
 	return (handle_split(split, words, s, c));
 }
 /*
-#include <stdio.h>
-
 int	main(void)
 {
 	char **split = ft_split("jojos,bizarre,adeventure", ',');

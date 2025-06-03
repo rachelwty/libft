@@ -6,10 +6,11 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:35:53 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 20:52:04 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 16:53:49 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <stdio.h>
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
@@ -32,8 +33,6 @@ void	to_upper(unsigned int i, char *c)
 		*c = *c - 32;
 }
 /*
-#include <stdio.h>
-
 int	main(void)
 {
 	char str[] = "hello";

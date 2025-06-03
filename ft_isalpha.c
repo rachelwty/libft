@@ -6,7 +6,7 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 17:14:48 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/19 19:47:05 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:40:42 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -19,8 +19,6 @@ int	ft_isalpha(int c)
 	return (0);
 }
 /*
-#include <stdio.h>
-
 int main (void)
 {
 	printf("ft_isalpha('A') = %d\n", ft_isalpha('A'));

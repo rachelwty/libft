@@ -6,10 +6,11 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:48:30 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/06/03 16:30:39 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:07:34 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <stdio.h>
 
 char	*empty_substr(void)
 {
@@ -50,8 +51,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substr);
 }
 /*
-#include <stdio.h>
-
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 int	main(void)

@@ -6,10 +6,11 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 15:47:43 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 21:07:52 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:13:42 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <stdio.h>
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
@@ -25,8 +26,6 @@ void	print_content(void *content)
 	printf("%s\n", (char *)content);
 }
 /*
-#include <stdio.h>
-
 int main(void)
 {
     t_list *head = malloc(sizeof(t_list));

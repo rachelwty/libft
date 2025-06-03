@@ -6,10 +6,11 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 15:42:36 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 23:05:29 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:18:41 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <stdio.h>
 
 t_list	*ft_lstnew(void *content)
 {
@@ -31,8 +32,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 }
 /*
-#include <stdio.h>
-
 int	main(void)
 {
 	t_list *head = 0;

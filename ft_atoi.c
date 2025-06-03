@@ -6,10 +6,11 @@
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 17:32:09 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/05/31 16:44:12 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 17:20:49 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
@@ -36,8 +37,6 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 /*
-#include <stdio.h>
-
 int main(void)
 {
     printf("ft_atoi(\"-2147483648\") = %d\n", ft_atoi("-2147483648"));
