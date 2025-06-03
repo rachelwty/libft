@@ -1,27 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wtze-yan <wtze-yan@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:53:39 by wtze-yan          #+#    #+#             */
-/*   Updated: 2025/06/03 16:17:04 by wtze-yan         ###   ########.fr       */
+/*   Updated: 2025/06/03 18:39:12 by wtze-yan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-t_list	*ft_lstnew(void *content)
-{
-	t_list	*node;
-
-	node = malloc(sizeof(t_list));
-	if (!node)
-		return (0);
-	node->content = content;
-	node->next = 0;
-	return (node);
-}
 
 int	ft_lstsize(t_list *lst)
 {
