@@ -11,68 +11,100 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-static size_t	ft_countword(char const *s, char c)
+static int	word_count(char const *s, char c)
 {
-	size_t	count;
+	int	index;
+	int	count;
 
-	count = 0;
-	while (*s)
+	index = 0;
+	while (s[index] && s[index] == c)
+		index++;
+	if (!*s)
+		return (0);
+	count = 1;
+	while (s[index])
 	{
-		while (*s == c)
-			s++;
-		if (*s)
+		if ((index > 0 && s[index - 1] == c) && s[index] != c)
 			count++;
-		while (*s && *s != c)
-			s++;
+		index++;
 	}
 	return (count);
 }
 
-static char	*ft_dupword(char const *s, size_t len)
+static char	**empty_array(void)
 {
-	char	*word;
-	size_t	i;
+	char	**empty;
 
-	word = (char *)malloc(len + 1);
-	if (!word)
-		return (0);
-	i = 0;
-	while (i < len)
+	empty = (char **) malloc(sizeof(char *));
+	if (empty)
+		empty[0] = NULL;
+	return (empty);
+}
+
+static int	has_failed(char *str, char **array, int computed_index)
+{
+	int	index;
+
+	if (!str)
 	{
-		word[i] = s[i];
-		i++;
+		index = 0;
+		while (index <= computed_index)
+		{
+			free(array[index]);
+			index++;
+		}
+		free(array);
+		return (1);
 	}
-	word[i] = '\0';
-	return (word);
+	return (0);
+}
+
+static char	**handle_split(char **ptr, int ptr_size, char const *s, char c)
+{
+	int	end_index;
+	int	array_index;
+	int	sub_index;
+
+	array_index = 0;
+	while (array_index < ptr_size)
+	{
+		while (*s == c)
+			s++;
+		end_index = 0;
+		while (s[end_index] && s[end_index] != c)
+			end_index++;
+		ptr[array_index] = (char *) malloc(end_index + 1);
+		if (has_failed(ptr[array_index], ptr, array_index))
+			return (NULL);
+		sub_index = 0;
+		while (sub_index < end_index)
+		{
+			ptr[array_index][sub_index] = s[sub_index];
+			sub_index++;
+		}
+		ptr[array_index++][sub_index] = '\0';
+		s += end_index + 1;
+	}
+	return (ptr);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**lst;
-	size_t	word_len;
-	int		i;
+	int		words;
+	char	**split;
 
-	if (!s)
-		return (0);
-	lst = malloc((ft_countword(s, c) + 1) * sizeof(char *));
-	if (!lst)
-		return (0);
-	i = 0;
-	while (*s)
-	{
-		while (*s == c)
-			s++;
-		if (*s)
-		{
-			word_len = 0;
-			while (s[word_len] && s[word_len] != c)
-				word_len++;
-			lst[i++] = ft_dupword(s, word_len);
-			s += word_len;
-		}
-	}
-	lst[i] = 0;
-	return (lst);
+	if (ft_strlen(s) == 0)
+		return (empty_array());
+	while (*s && *s == c)
+		s++;
+	words = word_count(s, c);
+	if (words == 0)
+		return (empty_array());
+	split = (char **) malloc((words + 1) * sizeof(char *));
+	if (!split)
+		return (NULL);
+	split[words] = NULL;
+	return (handle_split(split, words, s, c));
 }
 /*
 #include <stdio.h>
@@ -80,13 +112,16 @@ char	**ft_split(char const *s, char c)
 int	main(void)
 {
 	char **split = ft_split("jojos,bizarre,adeventure", ',');
+
 	if (!split)
 		return (1);
+
 	for (size_t i = 0; split[i]; i++)
 	{
 		printf("%s\n", split[i]);
 		free(split[i]);
 	}
 	free(split);
+
 	return (0);
-}*/
+}
